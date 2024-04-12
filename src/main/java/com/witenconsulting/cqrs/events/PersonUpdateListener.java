@@ -7,6 +7,7 @@ import com.witenconsulting.cqrs.model.PersonReadModel;
 import com.witenconsulting.cqrs.repository.PersonReadModelRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,7 +17,7 @@ public class PersonUpdateListener {
     private final PersonReadModelRepository personReadModelRepository;
 
     @RabbitListener(queues = RabbitMqConfig.QUEUE)
-    public void receiveMessage(PersonDto personDto) {
+    public void receiveMessage(@Payload PersonDto personDto) {
         PersonReadModel personReadModel = PersonMapper.INSTANCE.personDtoToPersonReadModel(personDto);
         personReadModelRepository.save(personReadModel);
     }

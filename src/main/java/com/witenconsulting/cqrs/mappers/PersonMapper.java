@@ -8,23 +8,25 @@ import com.witenconsulting.cqrs.model.AddressReadModel;
 import com.witenconsulting.cqrs.model.PersonReadModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface PersonMapper {
     PersonMapper INSTANCE = Mappers.getMapper(PersonMapper.class);
 
-    @Mapping(source = "address", target = "address")
     PersonDto personToPersonDto(Person person);
 
-    @Mapping(target = "address", source = "address")
     Person personDtoToPerson(PersonDto dto);
 
     AddressDto addressToAddressDto(Address address);
     Address addressDtoToAddress(AddressDto dto);
 
-    @Mapping(source = "address", target = "address")
+    // Asegurándonos de que el mapeo entre AddressDto y AddressReadModel está bien configurado
+    @Mapping(source = "address", target = "address", qualifiedByName = "addressDtoToAddressReadModel")
     PersonReadModel personDtoToPersonReadModel(PersonDto personDto);
 
+    // Método con anotación @Named para el mapeo de dirección
+    @Named("addressDtoToAddressReadModel")
     AddressReadModel addressDtoToAddressReadModel(AddressDto addressDto);
 }

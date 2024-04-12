@@ -1,11 +1,13 @@
 package com.witenconsulting.cqrs.api.service;
 
+import com.witenconsulting.cqrs.config.RabbitMqConfig;
 import com.witenconsulting.cqrs.dto.PersonDto;
 import com.witenconsulting.cqrs.entity.Person;
 import com.witenconsulting.cqrs.mappers.PersonMapper;
 import com.witenconsulting.cqrs.repository.PersonRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,11 +16,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class PersonService {
 
     private final PersonRepository personRepository;
+    private final RabbitTemplate rabbitTemplate;
 
     @Transactional
     public PersonDto createPerson(@Valid PersonDto dto) {
         Person person = personRepository.save(PersonMapper.INSTANCE.personDtoToPerson(dto));
-        return PersonMapper.INSTANCE.personToPersonDto(person);
+        var personDto = PersonMapper.INSTANCE.personToPersonDto(person);
+        rabbitTemplate.convertAndSend(RabbitMqConfig.EXCHANGE, RabbitMqConfig.ROUTING_KEY, personDto);
+        return personDto;
     }
 
     public PersonDto updatePerson(@Valid PersonDto dto, Long id) {

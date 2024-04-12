@@ -2,14 +2,17 @@ package com.witenconsulting.cqrs.dto;
 
 import com.witenconsulting.cqrs.entity.Address;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Value;
+import lombok.*;
 
 import java.io.Serializable;
 
 /**
  * DTO for {@link Address}
  */
-@Value
+@AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 public class AddressDto implements Serializable {
     @NotBlank
     String street;
