@@ -1,6 +1,6 @@
-package com.witenconsulting.cqrs.command.repository;
+package com.witenconsulting.cqrs.repository;
 
-import com.witenconsulting.cqrs.command.domain.entity.Address;
+import com.witenconsulting.cqrs.entity.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

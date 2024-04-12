@@ -1,19 +1,18 @@
 type Query {
-    personById(id: ID!): Person
-    allPersons: [Person]
+    findPersonById(id: ID!): PersonReadModel
+    findAllPersons: [PersonReadModel]
 }
 
-type Person {
+type PersonReadModel {
     id: ID!
     name: String
     lastName: String
     birthDate: String
     phoneNumber: String
-    address: Address
+    address: AddressReadModel
 }
 
-type Address {
-    id: ID!
+type AddressReadModel {
     street: String
     number: String
     postalCode: String

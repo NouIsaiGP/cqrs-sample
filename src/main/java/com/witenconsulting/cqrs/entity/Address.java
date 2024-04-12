@@ -1,4 +1,4 @@
-package com.witenconsulting.cqrs.command.domain.entity;
+package com.witenconsulting.cqrs.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

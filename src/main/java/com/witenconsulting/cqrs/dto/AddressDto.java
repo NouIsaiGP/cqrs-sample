@@ -1,12 +1,13 @@
-package com.witenconsulting.cqrs.command.domain.dto;
+package com.witenconsulting.cqrs.dto;
 
+import com.witenconsulting.cqrs.entity.Address;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Value;
 
 import java.io.Serializable;
 
 /**
- * DTO for {@link com.witenconsulting.cqrs.command.domain.entity.Address}
+ * DTO for {@link Address}
  */
 @Value
 public class AddressDto implements Serializable {

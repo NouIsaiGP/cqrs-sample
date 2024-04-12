@@ -1,8 +1,8 @@
-package com.witenconsulting.cqrs.command.api.controller;
+package com.witenconsulting.cqrs.api.controller;
 
-import com.witenconsulting.cqrs.command.api.service.PersonService;
-import com.witenconsulting.cqrs.command.domain.base.BaseResponse;
-import com.witenconsulting.cqrs.command.domain.dto.PersonDto;
+import com.witenconsulting.cqrs.api.service.PersonService;
+import com.witenconsulting.cqrs.common.BaseResponse;
+import com.witenconsulting.cqrs.dto.PersonDto;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,10 +1,9 @@
-package com.witenconsulting.cqrs.command.api.service;
+package com.witenconsulting.cqrs.api.service;
 
-import com.witenconsulting.cqrs.command.domain.dto.PersonDto;
-import com.witenconsulting.cqrs.command.domain.entity.Address;
-import com.witenconsulting.cqrs.command.domain.entity.Person;
-import com.witenconsulting.cqrs.command.domain.mappers.PersonMapper;
-import com.witenconsulting.cqrs.command.repository.PersonRepository;
+import com.witenconsulting.cqrs.dto.PersonDto;
+import com.witenconsulting.cqrs.entity.Person;
+import com.witenconsulting.cqrs.mappers.PersonMapper;
+import com.witenconsulting.cqrs.repository.PersonRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.witenconsulting.cqrs.command.domain.dto;
+package com.witenconsulting.cqrs.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.witenconsulting.cqrs.entity.Person;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
- * DTO for {@link com.witenconsulting.cqrs.command.domain.entity.Person}
+ * DTO for {@link Person}
  */
 @Value
 public class PersonDto implements Serializable {

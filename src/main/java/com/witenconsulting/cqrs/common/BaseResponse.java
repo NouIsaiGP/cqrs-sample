@@ -1,4 +1,4 @@
-package com.witenconsulting.cqrs.command.domain.base;
+package com.witenconsulting.cqrs.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
