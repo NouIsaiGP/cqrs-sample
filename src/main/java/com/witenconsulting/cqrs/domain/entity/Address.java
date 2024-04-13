@@ -1,4 +1,4 @@
-package com.witenconsulting.cqrs.entity;
+package com.witenconsulting.cqrs.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,5 +28,13 @@ public class Address implements Serializable {
     @Column(name = "postal_code")
     private String postalCode;
 
-
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", street='" + street + '\'' +
+                ", number='" + number + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
+    }
 }

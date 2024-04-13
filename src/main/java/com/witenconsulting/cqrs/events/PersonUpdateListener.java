@@ -1,9 +1,9 @@
 package com.witenconsulting.cqrs.events;
 
 import com.witenconsulting.cqrs.config.RabbitMqConfig;
-import com.witenconsulting.cqrs.dto.PersonDto;
+import com.witenconsulting.cqrs.domain.dto.PersonDto;
 import com.witenconsulting.cqrs.mappers.PersonMapper;
-import com.witenconsulting.cqrs.model.PersonReadModel;
+import com.witenconsulting.cqrs.domain.model.PersonReadModel;
 import com.witenconsulting.cqrs.repository.PersonReadModelRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

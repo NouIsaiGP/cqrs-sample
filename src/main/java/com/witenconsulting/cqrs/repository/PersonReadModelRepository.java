@@ -1,6 +1,6 @@
 package com.witenconsulting.cqrs.repository;
 
-import com.witenconsulting.cqrs.model.PersonReadModel;
+import com.witenconsulting.cqrs.domain.model.PersonReadModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

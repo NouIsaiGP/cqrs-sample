@@ -1,4 +1,4 @@
-package com.witenconsulting.cqrs.entity;
+package com.witenconsulting.cqrs.domain.entity;
 
 
 import jakarta.persistence.*;

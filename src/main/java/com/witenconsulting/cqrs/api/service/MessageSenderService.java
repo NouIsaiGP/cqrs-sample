@@ -1,7 +1,7 @@
 package com.witenconsulting.cqrs.api.service;
 
 import com.witenconsulting.cqrs.config.RabbitMqConfig;
-import com.witenconsulting.cqrs.dto.PersonDto;
+import com.witenconsulting.cqrs.domain.dto.PersonDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;

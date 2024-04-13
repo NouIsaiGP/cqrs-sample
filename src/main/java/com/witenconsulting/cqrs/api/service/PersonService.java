@@ -1,8 +1,8 @@
 package com.witenconsulting.cqrs.api.service;
 
 import com.witenconsulting.cqrs.config.RabbitMqConfig;
-import com.witenconsulting.cqrs.dto.PersonDto;
-import com.witenconsulting.cqrs.entity.Person;
+import com.witenconsulting.cqrs.domain.dto.PersonDto;
+import com.witenconsulting.cqrs.domain.entity.Person;
 import com.witenconsulting.cqrs.mappers.PersonMapper;
 import com.witenconsulting.cqrs.repository.PersonRepository;
 import jakarta.validation.Valid;

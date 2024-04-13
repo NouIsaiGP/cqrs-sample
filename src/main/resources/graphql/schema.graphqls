@@ -1,6 +1,5 @@
 type Query {
-    findPersonById(id: ID!): PersonReadModel
-    findAllPersons: [PersonReadModel]
+    findAll: [PersonReadModel]
 }
 
 type PersonReadModel {

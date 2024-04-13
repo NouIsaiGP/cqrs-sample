@@ -1,11 +1,11 @@
 package com.witenconsulting.cqrs.mappers;
 
-import com.witenconsulting.cqrs.dto.AddressDto;
-import com.witenconsulting.cqrs.dto.PersonDto;
-import com.witenconsulting.cqrs.entity.Address;
-import com.witenconsulting.cqrs.entity.Person;
-import com.witenconsulting.cqrs.model.AddressReadModel;
-import com.witenconsulting.cqrs.model.PersonReadModel;
+import com.witenconsulting.cqrs.domain.dto.AddressDto;
+import com.witenconsulting.cqrs.domain.dto.PersonDto;
+import com.witenconsulting.cqrs.domain.entity.Address;
+import com.witenconsulting.cqrs.domain.entity.Person;
+import com.witenconsulting.cqrs.domain.model.AddressReadModel;
+import com.witenconsulting.cqrs.domain.model.PersonReadModel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

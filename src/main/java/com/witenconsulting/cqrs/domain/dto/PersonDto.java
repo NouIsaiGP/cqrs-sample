@@ -1,6 +1,6 @@
-package com.witenconsulting.cqrs.dto;
+package com.witenconsulting.cqrs.domain.dto;
 
-import com.witenconsulting.cqrs.entity.Person;
+import com.witenconsulting.cqrs.domain.entity.Person;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;

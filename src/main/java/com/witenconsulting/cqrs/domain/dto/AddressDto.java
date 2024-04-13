@@ -1,6 +1,6 @@
-package com.witenconsulting.cqrs.dto;
+package com.witenconsulting.cqrs.domain.dto;
 
-import com.witenconsulting.cqrs.entity.Address;
+import com.witenconsulting.cqrs.domain.entity.Address;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
